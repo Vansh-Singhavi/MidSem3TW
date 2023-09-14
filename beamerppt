@@ -1,0 +1,127 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{minted}
+\usetheme{Madrid}
+
+\title{Functions in C}
+\author[]{Name: Vansh Singhavi \\ Branch: Computer Science and Engineering \\ ID: 2022UCP1123}
+\date{\today}
+
+\begin{document}
+    \begin{frame}
+        \begin{center}
+            \includegraphics[scale = 0.2]{Mnit_logo.png}
+        \end{center}
+        \maketitle
+    \end{frame}
+
+    \begin{frame}{Contents: }
+        \begin{itemize}
+            \item \textbf{What are Functions?}
+            \item \textbf{Example Code in C}
+            \item \textbf{Advantages of Functions}
+            \item \textbf{Difference between call by value and call by reference}
+        \end{itemize}
+    \end{frame}
+
+    \section{What are functions?}
+    \begin{frame}{What are functions?}
+        \begin{block}{Functions in C}
+            Functions are a block of instruction that are to be executed multiple times, when needed. They are pieces of code that are executed only when they are called upon.
+        \end{block}
+    \end{frame}
+
+    \begin{frame}{Syntax}
+        \begin{alertblock}{Syntax for function declaration in C:}
+        \begin{semiverbatim}
+return\_type function\_name(parameter\_list);
+
+For example: void function1(int a, int c, char ch);
+        \end{semiverbatim}
+        \end{alertblock}
+        \begin{alertblock}{Syntax for function declaration in C:}
+        \begin{semiverbatim}
+return\_type function\_name(parameter\_list)\{
+
+    //Some Code
+    
+\}
+
+For example: void function1(int a, int b, char ch)\{
+
+printf("\%d, \%c and \%d", a, ch, b);
+
+\}
+        \end{semiverbatim}
+        \end{alertblock}
+    \end{frame}
+
+    \begin{frame}[fragile]
+        \begin{example}{Example code in C:}
+        \begin{semiverbatim}
+#include <stdio.h>
+int greatest(int a, int b)\{ 
+//Function to find the greatest of 2 numbers
+    if (a > b)
+        return a;
+    else 
+        return b;
+\}
+int main(void)\{
+    int a = 10, b = 4;
+    int result = greatest(a, b);
+    printf(result);
+\}
+OUTPUT: 10
+        \end{semiverbatim}
+        \end{example}
+    \end{frame}
+
+    \section{Advantages of functions}
+    \begin{frame}{Advantages of using functions}
+        Using functions, has a lot of advantages, some of them are listed below: 
+        \begin{enumerate}[(i)]
+            \item Re-usability 
+            \item Helps us break a problem into smaller sub-problems
+            \item Helps in Abstraction
+            \item Program becomes easier to debug
+            \item It makes it easier to modify code in future
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}{Call by Value and Call by Reference}
+        \begin{block}{Call by Value}
+            In call by value method of parameter passing, the values of actual parameters are copied to the function’s formal parameters.
+        \end{block}
+  
+        \begin{block}{Call by Reference}
+            In call by reference method of parameter passing, the address of the actual parameters is passed to the function as the formal parameters.
+        \end{block}
+    \end{frame}
+
+    \begin{frame}{Difference between Call by Value and Call by Reference}
+        \begin{columns}
+        \column{0.5\textwidth}
+            \begin{itemize}
+                \item The values of actual parameters are copied to the function’s formal parameters.
+                \item Any change made to formal parameters will not affect the actual parameters.
+                \item Formal parameters and actual parameters point to different memory addresses.
+            \end{itemize}
+        \column{0.5\textwidth}
+            \begin{itemize}
+                \item The address of the actual parameters is passed to the function as the formal parameters.
+                \item Any change made to formal parameters is reflected in actual parameters.
+                \item Formal parameters and actual parameters point to the same memory address.
+            \end{itemize}
+        \end{columns}
+    \end{frame}
+
+    \section{END}
+    \begin{frame}
+        \begin{center}
+            \textbf{THANK YOU!}    
+        \end{center}
+    \end{frame}
+\end{document}
+
